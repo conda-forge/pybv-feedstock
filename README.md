@@ -5,11 +5,11 @@ Home: https://pybv.readthedocs.io/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pybv-feedstock/blob/master/LICENSE.txt)
 
 Summary: A lightweight I/O utility for the BrainVision data format, written in Python
 
-
+Development: https://github.com/bids-standard/pybv
 
 Current build status
 ====================
