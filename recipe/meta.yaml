@@ -1,5 +1,5 @@
 {% set name = "pybv" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef1104cfcd66dafb7383dc539fe688ebcd6822bffe0f0f743292853586e74ffa
+  sha256: b1ac291ada328e9379a63d62402ad31630922d18c4bd6f198c4c39d94496bfa3
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
