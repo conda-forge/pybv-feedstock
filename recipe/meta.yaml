@@ -1,5 +1,5 @@
 {% set name = "pybv" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b1ac291ada328e9379a63d62402ad31630922d18c4bd6f198c4c39d94496bfa3
+  sha256: a37ce4d77a93e945e743240e6362c65bcca30053cac2103447855e79ebbebde1
 
 build:
   noarch: python
