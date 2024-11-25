@@ -1,13 +1,14 @@
 {% set name = "pybv" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 57bb09305c1255b11dd5c6a75d0e6b3c81675cf0469d6a757b148ac332ac05d5
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 518dac9bf151601c45787bf0ddcc5e37afd61033058eb734067825f8ae46d51b
 
 build:
   noarch: python
@@ -16,13 +17,17 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - hatchling
+    - hatch-vcs
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy >=1.18.1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pybv
     - pybv.io
